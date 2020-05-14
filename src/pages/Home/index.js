@@ -24,7 +24,7 @@ const Home = () =>{
 
   const nextPage = () => {
     //964 pokémons / 12 p/pag. = 84 pag.
-    if(page === 84) return;
+    if(page === 73) return;
 
     handleSwitchNext();
     const pageNumber = page + 1;
@@ -51,8 +51,6 @@ const Home = () =>{
     const lastId = idNumber[0];
     const emptyArray = [];
     await setArray(emptyArray);
-
-    if(lastId === 960) return setArray('961','962','963','964');
     
     const newArray = idNumber.map((id, count) => (lastId - count));
     const reverseArray = newArray.reverse();
