@@ -9,8 +9,8 @@
 </h4>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://user-images.githubusercontent.com/48860569/81975168-07e60100-95fd-11ea-8e1f-c5f7cc0ca477.png">
   <img alt="GitHub top language" src="https://user-images.githubusercontent.com/48860569/81975172-087e9780-95fd-11ea-9c29-d58e993782fc.png">
+  <img alt="GitHub top language" src="https://user-images.githubusercontent.com/48860569/81975168-07e60100-95fd-11ea-8e1f-c5f7cc0ca477.png">
 </p>
 
 <p align="center">
