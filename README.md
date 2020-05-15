@@ -23,7 +23,7 @@
     Demo do app no netlify
 </h3>
 
-<p align="center">https://pokemon-store.app/</p>
+<p align="center">https://pokemon-store.netlify.app/</p>
 
 ## :video_game: Tecnologias
 

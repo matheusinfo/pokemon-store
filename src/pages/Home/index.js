@@ -37,8 +37,6 @@ const Home = () =>{
     const lastId = idNumber[11];
     const emptyArray = [];
     await setArray(emptyArray);
-
-    if(lastId === 960) return setArray('961','962','963','964');
     
     const newArray = idNumber.map((id, count) => (lastId + count));
     const finalArray = newArray.map(id => id.toString());
@@ -51,6 +49,8 @@ const Home = () =>{
     const lastId = idNumber[0];
     const emptyArray = [];
     await setArray(emptyArray);
+
+    if(lastId === 960) return setArray('961','962','963','964');
     
     const newArray = idNumber.map((id, count) => (lastId - count));
     const reverseArray = newArray.reverse();

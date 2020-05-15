@@ -7,15 +7,18 @@ import {useDispatch} from 'react-redux';
 import {ListItem, Button, Types} from './styles';
 import api from '../../../services/api';
 import typeColors from "../../../styles/typeColors";
+import Skeleton from '../../Skeleton';
 
 import * as CartActions from '../../../store/modules/cart/actions';
 
 const PokemonCard = (props) => {
     // Hooks
     const [pokemon, setPokemon] = useState({});
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         async function loadPokemons(){
+            setLoading(true);
            const response = await api.get(props.id);
 
            // Separando os tipos dos pokémons
@@ -30,6 +33,8 @@ const PokemonCard = (props) => {
                name: response.data.name,
                price: response.data.base_experience * 25
             })
+
+            setLoading(false);
         }
 
         loadPokemons();
@@ -45,26 +50,28 @@ const PokemonCard = (props) => {
         }, {})
       );
 
-    
-
     return(
-        <ListItem active={false}>
-            <div>{pokemon.types}</div>
-            
-            <img src={pokemon.image} alt="pokemon"/>
+            loading ? (
+                <Skeleton/>
+            ) : (
+                <ListItem active={false}>
+                    <div>{pokemon.types}</div>
+                
+                    <img src={pokemon.image} alt="pokemon"/>
 
-            <strong>{pokemon.name}</strong>
-            <span>R$ {pokemon.price},00</span>
+                    <strong>{pokemon.name}</strong>
+                    <span>R$ {pokemon.price},00</span>
 
-             <Button type="button" onClick={() => dispatch(CartActions.addToCart(pokemon))}>
-                <div >
-                    <MdAddShoppingCart size={16}/> 
-                    {amount[pokemon.id] || 0}
-                </div>
+                    <Button type="button" onClick={() => dispatch(CartActions.addToCart(pokemon))}>
+                        <div >
+                            <MdAddShoppingCart size={16}/> 
+                            {amount[pokemon.id] || 0}
+                        </div>
 
-                <span>ADICIONAR AO CARRINHO</span>
-            </Button>
-        </ListItem>
+                        <span>ADICIONAR AO CARRINHO</span>
+                    </Button>
+                </ListItem>
+            )
     )
 }
 
