@@ -33,6 +33,8 @@ Esse projeto foi desenvolvido para estudo, e usei as seguintes tecnologias:
 -  [ReactHooks](https://github.com/rehooks/awesome-react-hooks)
 -  [Redux](https://redux.js.org/)
 -  [Redux-Saga](https://redux-saga.js.org/)
+-  [Prop-Types](https://github.com/facebook/prop-types)
+-  [Skeleton](https://github.com/dvtng/react-loading-skeleton)
 -  [Axios](https://github.com/axios/axios)
 -  [styled-components](https://www.styled-components.com/)
 -  [FontAwesome](https://github.com/FortAwesome/Font-Awesome)

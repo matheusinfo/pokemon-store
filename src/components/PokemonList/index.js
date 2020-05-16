@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import PokemonCard from './PokemonCard';
+import Pokemon from './Pokemon';
 import {ProductList} from './styles';
 
 const PokemonList = (props) => {
@@ -8,9 +9,13 @@ const PokemonList = (props) => {
 
     return(
         <ProductList>
-          {idPokemon.map((value, id) => {return <PokemonCard key={id} id={value}/>})}
+          {idPokemon.map((value, id) => {return <Pokemon key={id} id={value}/>})}
         </ProductList>
     )
+}
+
+PokemonList.propTypes = {
+  listId: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default PokemonList;

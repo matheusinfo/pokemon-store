@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {Container} from './styles';
+
 
 const SwitchPage = (props) => {
     return(
@@ -10,6 +12,12 @@ const SwitchPage = (props) => {
             <button onClick={props.nextPage}>Próximo</button>
         </Container>
     );
+}
+
+SwitchPage.propTypes ={
+    prevPage: PropTypes.func.isRequired,
+    nextPage: PropTypes.func.isRequired,
+    page: PropTypes.number.isRequired
 }
 
 export default SwitchPage;
