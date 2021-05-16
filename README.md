@@ -44,7 +44,7 @@ Esse projeto foi desenvolvido para estudo, e usei as seguintes tecnologias:
 
 ```bash
 # Clonar o repositório
-$ git clone https://github.com/MatheusINFO/PokemonStore.git
+$ git clone https://github.com/MatheusINFO/pokemon-store.git
 
 # Ir dentro do repositório clonado
 $ cd PokemonStore
